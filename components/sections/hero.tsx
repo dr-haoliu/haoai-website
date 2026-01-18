@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -25,12 +26,16 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
-              <Button size="lg" className="text-lg px-8 py-4">
-                Explore Research
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-4">
-                Latest News
-              </Button>
+              <Link href="#publications">
+                <Button size="lg" className="text-lg px-8 py-4">
+                  Explore Research
+                </Button>
+              </Link>
+              <Link href="/blog">
+                <Button variant="outline" size="lg" className="text-lg px-8 py-4">
+                  Latest News
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

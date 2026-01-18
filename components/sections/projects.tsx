@@ -2,6 +2,7 @@ import { Container } from '@/components/ui/container'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { Card, CardBody, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export function Projects() {
   const projects = [
@@ -91,9 +92,9 @@ export function Projects() {
         </div>
         
         <div className="mt-12 text-center">
-          <Button size="lg">
-            View All Projects
-          </Button>
+          <Link href="https://dr-haoliu.github.io/projects/" target="_blank" rel="noopener noreferrer">
+            <Button size="lg">View All Projects</Button>
+          </Link>
         </div>
       </Container>
     </Section>
