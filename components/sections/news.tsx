@@ -5,46 +5,47 @@ import { Container } from '@/components/ui/container'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { Card, CardBody, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { useState, useEffect } from 'react'
+
+interface Post {
+  slug: string
+  title: string
+  date: string
+  category: string
+  excerpt: string
+  readTime: number
+  featured: boolean
+}
 
 export function News() {
-  const featuredNews = [
-    {
-      slug: 'nsf-grant-2025',
-      title: 'HaoAI Receives 2025 NSF Grant for AI-Powered Disease Diagnosis',
-      category: 'Grant',
-      date: '2025-01-15',
-      excerpt: 'Our research team has been awarded a prestigious NSF grant to develop agentic AI systems for early disease detection and personalized treatment recommendations.',
-      readTime: 5
-    },
-    {
-      slug: 'nature-medicine-paper-2024',
-      title: 'New Research Paper Published in Nature Medicine',
-      category: 'Publication',
-      date: '2024-12-10',
-      excerpt: 'Our latest work on transformer models for clinical note understanding has been published in Nature Medicine, demonstrating state-of-the-art performance on multiple medical NLP benchmarks.',
-      readTime: 3
-    },
-    {
-      slug: 'biomed-lm-20-release',
-      title: 'Open Source Release: BioMed-LM-2.0',
-      category: 'Open Source',
-      date: '2024-09-01',
-      excerpt: 'We have released BioMed-LM-2.0, an improved language model specifically trained on biomedical literature. The model is available on Hugging Face for research use.',
-      readTime: 6
-    }
-  ]
+  const [featuredPosts, setFeaturedPosts] = useState<Post[]>([])
+
+  useEffect(() => {
+    fetch('/api/posts')
+      .then((res) => res.json())
+      .then((data) => {
+        const featured = data.posts.filter((p: Post) => p.featured).slice(0, 3)
+        setFeaturedPosts(featured)
+      })
+      .catch((err) => console.error('Failed to fetch posts:', err))
+  }, [])
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    alert('Thank you for subscribing! Newsletter coming soon.')
+  }
 
   return (
     <Section className="bg-white dark:bg-surface-800" id="news">
       <Container>
-        <SectionHeader 
+        <SectionHeader
           title="Latest News & Insights"
           subtitle="Stay Updated"
           description="Discover the latest developments in AI research, bioinformatics breakthroughs, and opinions from our team on emerging trends."
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredNews.map((post) => (
+          {featuredPosts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`}>
               <Card className="hover:shadow-lg transition-all hover:-translate-y-1 h-full">
                 <CardHeader className="pb-3">
@@ -75,12 +76,10 @@ export function News() {
             </Link>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
           <Link href="/blog">
-            <Button size="lg">
-              View All News
-            </Button>
+            <Button size="lg">View All News</Button>
           </Link>
         </div>
 
@@ -90,7 +89,7 @@ export function News() {
             <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
               Subscribe to our newsletter for the latest research updates, publications, and AI insights delivered to your inbox.
             </p>
-            <form className="flex flex-col sm:flex-row gap-2" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col sm:flex-row gap-2" onSubmit={handleSubscribe}>
               <input
                 type="email"
                 placeholder="Enter your email"
