@@ -15,7 +15,7 @@ export function Team() {
           description="Meet our dedicated team of researchers and contributors working to advance agentic AI for the greater good."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {team.map((member) => (
             <Card key={member.id} className="hover:shadow-lg transition-shadow text-center">
               <CardBody className="p-6">
