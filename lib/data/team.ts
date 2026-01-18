@@ -3,7 +3,7 @@ export const teamMembers = [
     id: 1,
     name: 'Dr. Hao Liu',
     role: 'Principal Investigator',
-    image: null,
+    image: 'https://dr-haoliu.github.io/assets/img/prof_pic.jpg',
     bio: 'Assistant Professor in the Department of Computer Science at Montclair State University. Research focuses on developing agentic AI systems for healthcare applications with emphasis on clinical decision support, biomedical ontology engineering, and natural language processing for clinical text.',
     email: 'hliu@montclair.edu',
     googleScholar: 'https://scholar.google.com/citations?user=hliu',

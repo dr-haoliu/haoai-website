@@ -19,10 +19,18 @@ export function Team() {
           {team.map((member) => (
             <Card key={member.id} className="hover:shadow-lg transition-shadow text-center">
               <CardBody className="p-6">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-primary-600 dark:text-primary-400">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center overflow-hidden">
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-3xl font-bold text-primary-600 dark:text-primary-400">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  )}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                   {member.name}
