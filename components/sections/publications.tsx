@@ -2,6 +2,7 @@ import { Container } from '@/components/ui/container'
 import { Section, SectionHeader } from '@/components/ui/section'
 import { Card, CardBody, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export function Publications() {
   const publications = [
@@ -88,9 +89,9 @@ export function Publications() {
         </div>
         
         <div className="mt-12 text-center">
-          <Button size="lg">
-            View All Publications
-          </Button>
+          <Link href="https://dr-haoliu.github.io/publications/" target="_blank" rel="noopener noreferrer">
+            <Button size="lg">View All Publications</Button>
+          </Link>
         </div>
       </Container>
     </Section>

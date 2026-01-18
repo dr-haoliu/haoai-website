@@ -2,170 +2,125 @@ export const teamMembers = [
   {
     id: 1,
     name: 'Dr. Hao Liu',
-    role: 'Founder & Principal Investigator',
-    image: '/images/team/hao-liu.jpg',
-    bio: 'Dr. Hao Liu is an Assistant Professor in the Department of Computer Science at Montclair State University. His research focuses on developing agentic AI systems for healthcare applications, with particular emphasis on clinical decision support, biomedical ontology engineering, and natural language processing for clinical text.',
+    role: 'Principal Investigator',
+    image: null,
+    bio: 'Assistant Professor in the Department of Computer Science at Montclair State University. Research focuses on developing agentic AI systems for healthcare applications with emphasis on clinical decision support, biomedical ontology engineering, and natural language processing for clinical text.',
     email: 'hliu@montclair.edu',
-    linkedin: 'https://linkedin.com/in/dr-haoliu',
-    twitter: 'https://twitter.com/dr_haoliu',
     googleScholar: 'https://scholar.google.com/citations?user=hliu',
     researchInterests: ['Agentic AI', 'Clinical NLP', 'Biomedical Ontologies', 'Healthcare Informatics'],
-    publications: 45,
-    education: [
-      { degree: 'Ph.D. in Computer Science', institution: 'Stanford University', year: 2018 },
-      { degree: 'M.S. in Computer Science', institution: 'MIT', year: 2014 },
-      { degree: 'B.S. in Computer Science', institution: 'Tsinghua University', year: 2012 }
-    ],
-    featured: true
+    featured: true,
+    category: 'faculty'
   },
   {
     id: 2,
-    name: 'Jane Smith',
-    role: 'Postdoctoral Researcher',
-    image: '/images/team/jane-smith.jpg',
-    bio: 'Jane Smith is a postdoctoral researcher specializing in natural language processing for clinical applications. Her current work focuses on grounding medical concepts to biomedical ontologies and developing transformer-based models for clinical decision support.',
-    email: 'jane.smith@montclair.edu',
-    linkedin: 'https://linkedin.com/in/janesmith',
-    twitter: null,
-    googleScholar: 'https://scholar.google.com/citations?user=jsmith',
-    researchInterests: ['NLP', 'Transformers', 'Entity Linking', 'Clinical NLP'],
-    publications: 12,
-    education: [
-      { degree: 'Ph.D. in Computer Science', institution: 'Columbia University', year: 2023 },
-      { degree: 'M.S. in Data Science', institution: 'Carnegie Mellon', year: 2019 }
-    ],
-    featured: true
+    name: 'Sangeun Lee',
+    role: 'Graduate Student, MS in Data Science',
+    image: null,
+    bio: 'Graduate student in Data Science at Montclair State University with a background in Psychology. Research focuses on the application of machine learning and deep learning techniques to medical imaging, particularly in the analysis of brain MRI for Alzheimer\'s disease classification. Works on developing neural network models for image-based diagnostics, with emphasis on multimodal integration and sequence modeling.',
+    email: null,
+    googleScholar: null,
+    researchInterests: ['Machine Learning', 'Deep Learning', 'Medical Imaging', 'Alzheimer\'s Disease'],
+    featured: true,
+    category: 'current'
   },
   {
     id: 3,
-    name: 'Michael Chen',
-    role: 'Ph.D. Student',
-    image: '/images/team/michael-chen.jpg',
-    bio: 'Michael Chen is a second-year Ph.D. student working on multi-agent systems for clinical decision support. His research focuses on developing autonomous agents that can collaborate to solve complex healthcare problems.',
-    email: 'm.chen@montclair.edu',
-    linkedin: 'https://linkedin.com/in/michaelchen',
-    twitter: 'https://twitter.com/michaelchen',
+    name: 'Ahnasia Goulbourne',
+    role: 'Undergraduate, BS in Data Science',
+    image: null,
+    bio: 'Undergraduate student pursuing a major in Data Science with a minor in Mathematics. Current research focuses on the implementation of artificial intelligence and retrieval-augmented generation (RAG) agents to interface with large language models (LLMs) for the evaluation of heart disease risk factors, treatments, and follow-up plans.',
+    email: null,
     googleScholar: null,
-    researchInterests: ['Multi-agent Systems', 'Agentic AI', 'Clinical Decision Support'],
-    publications: 5,
-    education: [
-      { degree: 'B.S. in Computer Science', institution: 'UC Berkeley', year: 2022 }
-    ],
-    featured: true
+    researchInterests: ['Artificial Intelligence', 'RAG Agents', 'LLMs', 'Heart Disease Risk Assessment'],
+    featured: true,
+    category: 'current'
   },
   {
     id: 4,
-    name: 'Sarah Johnson',
-    role: 'Ph.D. Student',
-    image: '/images/team/sarah-johnson.jpg',
-    bio: 'Sarah Johnson is a Ph.D. student specializing in biomedical knowledge graphs and ontology integration. Her work aims to create comprehensive knowledge representations that can support AI-driven biomedical research.',
-    email: 's.johnson@montclair.edu',
-    linkedin: 'https://linkedin.com/in/sarahjohnson',
-    twitter: null,
+    name: 'Pritom Bhowmik',
+    role: 'Alumni, MS Data Science 2025',
+    image: null,
+    bio: 'AI & Data Science Researcher with 3+ years of experience applying advanced analytics and machine learning to logistics and product intelligence. Focuses on harnessing AI to optimize supply chain workflows and guide strategic product decisions through behavioral data. Research includes Agentic RAG systems, Graph RAG architecture, and AI-driven experimentation.',
+    email: null,
     googleScholar: null,
-    researchInterests: ['Knowledge Graphs', 'Ontology Integration', 'Graph Neural Networks'],
-    publications: 3,
-    education: [
-      { degree: 'M.S. in Bioinformatics', institution: 'University of Washington', year: 2023 },
-      { degree: 'B.S. in Biology', institution: 'University of Michigan', year: 2021 }
-    ],
-    featured: false
+    researchInterests: ['Agentic RAG', 'Graph RAG', 'AI Driven Experimentation', 'Supply Chain Analytics'],
+    featured: false,
+    category: 'alumni'
   },
   {
     id: 5,
-    name: 'David Park',
-    role: 'Research Software Engineer',
-    image: '/images/team/david-park.jpg',
-    bio: 'David Park brings extensive experience in software engineering and machine learning infrastructure to the team. He develops and maintains the core systems and platforms used across multiple HaoAI projects.',
-    email: 'd.park@montclair.edu',
-    linkedin: 'https://linkedin.com/in/davidpark',
-    twitter: 'https://twitter.com/davidpark',
+    name: 'Andres Campoverde',
+    role: 'Alumni, MS Computer Science 2025',
+    image: null,
+    bio: 'Master\'s graduate in Computer Science from Montclair State University with 4+ years of software engineering experience. Expertise in distributed computing, cloud computing, and machine learning, developing high-quality backend code using Go, Python, TypeScript, Scala, and Java.',
+    email: null,
     googleScholar: null,
-    researchInterests: ['Software Engineering', 'MLOps', 'Cloud Infrastructure', 'Machine Learning'],
-    publications: 2,
-    education: [
-      { degree: 'M.S. in Computer Science', institution: 'Georgia Tech', year: 2019 },
-      { degree: 'B.S. in Computer Engineering', institution: 'University of Illinois', year: 2017 }
-    ],
-    featured: false
+    researchInterests: ['Distributed Computing', 'Cloud Computing', 'Machine Learning', 'Software Engineering'],
+    featured: false,
+    category: 'alumni'
   },
   {
     id: 6,
-    name: 'Emma Wilson',
-    role: 'M.S. Student',
-    image: '/images/team/emma-wilson.jpg',
-    bio: 'Emma Wilson is a master\'s student focusing on evaluating large language models for clinical tasks. Her work includes developing comprehensive benchmarks and evaluation protocols for clinical AI systems.',
-    email: 'e.wilson@montclair.edu',
-    linkedin: 'https://linkedin.com/in/emmawilson',
-    twitter: null,
+    name: 'Shibbir Ahmed Arif',
+    role: 'Alumni, MS Data Science 2025',
+    image: null,
+    bio: 'Graduate of the Master of Data Science program and former graduate teaching assistant at the School of Computing. Involved in cutting-edge research in natural language processing (NLP) with 2+ years of experience in data science and machine learning using Python.',
+    email: null,
     googleScholar: null,
-    researchInterests: ['Large Language Models', 'Evaluation', 'Clinical Benchmarks'],
-    publications: 1,
-    education: [
-      { degree: 'B.S. in Computer Science', institution: 'Princeton University', year: 2023 }
-    ],
-    featured: false
+    researchInterests: ['Natural Language Processing', 'Artificial Intelligence', 'Health Informatics', 'Data Science'],
+    featured: false,
+    category: 'alumni'
   },
   {
     id: 7,
-    name: 'Robert Kim',
-    role: 'Undergraduate Researcher',
-    image: '/images/team/robert-kim.jpg',
-    bio: 'Robert Kim is an undergraduate student contributing to the clinical decision support project. He is developing web-based interfaces for visualizing AI-generated recommendations and explanations.',
-    email: 'r.kim@montclair.edu',
-    linkedin: 'https://linkedin.com/in/robertkim',
-    twitter: null,
+    name: 'Ernest Chianumba',
+    role: 'Alumni, MS Data Science 2025',
+    image: null,
+    bio: 'Master\'s graduate in Data Science with over 8 years of experience in data analysis and operation management, specializing in healthcare analytics and e-commerce. Proficient in Python, SQL, and PowerBI. Contributed to research in healthcare predictive analytics, including a project funded by Bristol Myers Squibb utilizing NLP models to improve clinical predictions for underrepresented populations.',
+    email: null,
     googleScholar: null,
-    researchInterests: ['Web Development', 'UI/UX', 'Visualization', 'Clinical Decision Support'],
-    publications: 0,
-    education: [
-      { degree: 'B.S. in Computer Science (In Progress)', institution: 'Montclair State', year: 2025 }
-    ],
-    featured: false
+    researchInterests: ['Healthcare Analytics', 'NLP', 'Predictive Analytics', 'Data Analysis'],
+    featured: false,
+    category: 'alumni'
   },
   {
     id: 8,
-    name: 'Laura Martinez',
-    role: 'Undergraduate Researcher',
-    image: '/images/team/laura-martinez.jpg',
-    bio: 'Laura Martinez is an undergraduate student working on drug repurposing research. She helps curate biomedical datasets and develops algorithms for identifying novel therapeutic candidates.',
-    email: 'l.martinez@montclair.edu',
-    linkedin: 'https://linkedin.com/in/lauramartinez',
-    twitter: null,
+    name: 'Anand Gopeekrishnan',
+    role: 'Alumni, MS Data Science 2024',
+    image: null,
+    bio: 'Machine Learning Engineer with a robust background in Python, Machine Learning, Deep Learning, and Computer Vision. Holds a master\'s degree with over 6 years of working experience. Expertise includes working on LLMs such as BERT, RoBERTa, and XLM-Roberta, integrating OpenAI models, generating prompts, and utilizing Autogen agents.',
+    email: null,
     googleScholar: null,
-    researchInterests: ['Bioinformatics', 'Drug Discovery', 'Data Mining'],
-    publications: 0,
-    education: [
-      { degree: 'B.S. in Biochemistry (In Progress)', institution: 'Montclair State', year: 2025 }
-    ],
-    featured: false
+    researchInterests: ['Large Language Models', 'BERT', 'Computer Vision', 'Deep Learning'],
+    featured: false,
+    category: 'alumni'
+  },
+  {
+    id: 9,
+    name: 'Rachel Rubio',
+    role: 'Alumni, BS Data Science',
+    image: null,
+    bio: 'Former undergraduate student in the Bachelor of Data Science program at Montclair State University. Interested in medical image processing and machine learning research.',
+    email: null,
+    googleScholar: null,
+    researchInterests: ['Medical Image Processing', 'Machine Learning', 'Data Science'],
+    featured: false,
+    category: 'alumni'
   }
 ]
 
 export const featuredTeam = teamMembers.filter(member => member.featured)
 
 export const getFaculty = () => {
-  return teamMembers.filter(member => member.role.includes('Principal Investigator') || member.role.includes('Professor'))
+  return teamMembers.filter(member => member.category === 'faculty')
 }
 
-export const getPostdocs = () => {
-  return teamMembers.filter(member => member.role.includes('Postdoctoral'))
+export const getCurrentStudents = () => {
+  return teamMembers.filter(member => member.category === 'current')
 }
 
-export const getPhDStudents = () => {
-  return teamMembers.filter(member => member.role.includes('Ph.D.'))
-}
-
-export const getMSStudents = () => {
-  return teamMembers.filter(member => member.role.includes('M.S.'))
-}
-
-export const getUndergraduates = () => {
-  return teamMembers.filter(member => member.role.includes('Undergraduate'))
-}
-
-export const getStaff = () => {
-  return teamMembers.filter(member => member.role.includes('Engineer') || member.role.includes('Manager'))
+export const getAlumni = () => {
+  return teamMembers.filter(member => member.category === 'alumni')
 }
 
 export const getMemberById = (id: number) => {
