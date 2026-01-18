@@ -12,19 +12,19 @@ export default function BlogPage() {
   const recentPosts = getAllBlogPosts().slice(3)
 
   const featuredImages = [
-    'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80',
   ]
 
   const recentImages = [
-    'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1583912260925-14dd25133bc2?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80',
   ]
 
   return (

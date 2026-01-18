@@ -45,7 +45,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   const relatedPosts = getRelatedBlogPosts(post.slug, post.category, 3)
 
-  const heroImage = 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&auto=format&fit=crop'
+  const heroImage = 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80'
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">

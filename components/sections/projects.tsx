@@ -6,13 +6,13 @@ import Link from 'next/link'
 import { projects } from '@/lib/data/projects'
 
 export function Projects() {
-  const projectImages = [
-    'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1576029766337-c17bf462a0f8?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&auto=format&fit=crop',
+const projectImages = [
+    'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80',
   ]
 
   const statusColors = {

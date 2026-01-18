@@ -21,9 +21,9 @@ export function News() {
   const [featuredPosts, setFeaturedPosts] = useState<Post[]>([])
 
   const newsImages = [
-    'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1583912260925-14dd25133bc2?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=800&q=80',
   ]
 
   useEffect(() => {
