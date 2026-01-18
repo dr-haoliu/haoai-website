@@ -52,8 +52,12 @@ export function News() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredPosts.map((post, index) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-              <Card className="hover:shadow-lg transition-all hover:-translate-y-1 h-full">
+            <a
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group block"
+            >
+              <Card className="hover:shadow-lg transition-all hover:-translate-y-1 h-full cursor-pointer">
                 {newsImages[index % newsImages.length] && (
                   <div className="relative h-48 w-full overflow-hidden">
                     <img
@@ -72,7 +76,7 @@ export function News() {
                       {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400">
                     {post.title}
                   </h3>
                 </CardHeader>
@@ -82,13 +86,13 @@ export function News() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-500 dark:text-gray-400">{post.readTime} min read</span>
-                    <span className="text-sm text-primary-600 dark:text-primary-500 font-medium">
+                    <span className="text-sm text-primary-600 dark:text-primary-500 font-medium group-hover:underline">
                       Read more →
                     </span>
                   </div>
                 </CardBody>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
 
