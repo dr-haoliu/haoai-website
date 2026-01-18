@@ -19,7 +19,7 @@ export function Team() {
           {team.map((member) => (
             <Card key={member.id} className="hover:shadow-lg transition-shadow text-center">
               <CardBody className="p-6">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center overflow-hidden">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center overflow-hidden">
                   {member.image ? (
                     <img
                       src={member.image}
