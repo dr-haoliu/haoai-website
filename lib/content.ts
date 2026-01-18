@@ -16,6 +16,9 @@ export interface BlogPost {
   content?: string
 }
 
+export type Post = BlogPost
+export const getAllPosts = getAllBlogPosts
+
 export function getBlogPostSlugs() {
   const blogDirectory = path.join(contentDirectory, 'blog')
   

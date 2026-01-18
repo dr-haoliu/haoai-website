@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
+import { Search } from '@/components/search'
 
 export function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -43,7 +44,9 @@ export function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
+            <Search />
+            <div className="h-6 w-px bg-gray-300 dark:border-surface-600" />
             {navItems.map((item) => (
               <Link
                 key={item.href}
