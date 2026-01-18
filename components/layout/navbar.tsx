@@ -27,7 +27,7 @@ export function Navbar() {
   const navItems = [
     { label: 'About', href: '#about' },
     { label: 'Research', href: '#research' },
-    { label: 'News', href: '#news' },
+    { label: 'News', href: '/blog' },
     { label: 'Projects', href: '#projects' },
     { label: 'Publications', href: '#publications' },
     { label: 'Team', href: '#team' },

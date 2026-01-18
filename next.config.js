@@ -5,6 +5,10 @@ const nextConfig = {
     remotePatterns: [],
     formats: ['image/avif', 'image/webp'],
   },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  experimental: {
+    mdxRs: true,
+  },
 }
 
 module.exports = nextConfig
