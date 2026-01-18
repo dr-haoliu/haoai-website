@@ -1,90 +1,68 @@
 export const projects = [
   {
     id: 1,
-    title: 'MedBERT-Grounding',
-    description: 'A transformer model that grounds medical concepts to biomedical ontologies, enabling better understanding of clinical text.',
-    status: 'Active',
-    startDate: '2024-06',
-    collaborators: ['Montclair State University', 'Stanford University'],
-    repository: 'https://github.com/dr-haoliu/MedBERT-Grounding',
-    image: '/images/projects/medbert.jpg',
-    tags: ['NLP', 'Ontology', 'Transformers'],
-    featured: true,
-    link: 'https://github.com/dr-haoliu/MedBERT-Grounding'
+    title: 'CTCR Skills',
+    description:
+      'Domain knowledge and skills for Clinical Trial Cohort Research - Agent skills, MCP patterns, and pipeline templates for building clinical trial eligibility assessment pipelines.',
+    status: 'Ongoing',
+    tags: ['AI Agents', 'MCP', 'Clinical Trials'],
+    image: '',
+    link: 'https://github.com/dr-haoliu/ctcr-skills',
+    technologies: ['Python', 'LLM Agents', 'Model Context Protocol'],
   },
   {
     id: 2,
-    title: 'Clinical Agent Framework',
-    description: 'An agentic AI framework for clinical decision support that can autonomously gather and synthesize information from multiple sources.',
-    status: 'Active',
-    startDate: '2024-01',
-    collaborators: ['Montclair State University'],
-    repository: 'https://github.com/dr-haoliu/clinical-agent',
-    image: '/images/projects/clinical-agent.jpg',
-    tags: ['Agentic AI', 'Clinical Decision Support', 'Multi-agent Systems'],
-    featured: true,
-    link: 'https://github.com/dr-haoliu/clinical-agent'
+    title: 'Ontology-based Clinical Study Categorization',
+    description:
+      'Data, source code, and result for the Journal of Biomedical Informatics paper using SNOMED CT and MeSH ontologies to categorize clinical studies by their conditions.',
+    status: 'Completed',
+    tags: ['Ontology', 'SNOMED CT', 'Bioinformatics'],
+    image: '',
+    link: 'https://github.com/dr-haoliu/ontology-based-clinical-study-categorization',
+    technologies: ['Java', 'SNOMED CT', 'MeSH', 'Usagi'],
   },
   {
     id: 3,
-    title: 'BioMed-LM',
-    description: 'A language model pre-trained on biomedical literature for downstream tasks in medical NLP.',
-    status: 'Released',
-    startDate: '2023-09',
-    collaborators: ['Montclair State University'],
-    repository: 'https://github.com/dr-haoliu/BioMed-LM',
-    image: '/images/projects/biomed-lm.jpg',
-    tags: ['Language Models', 'Pre-training', 'Biomedical NLP'],
-    featured: false,
-    link: 'https://github.com/dr-haoliu/BioMed-LM'
+    title: 'Race-sensitive Embeddings for MIMIC-IV',
+    description:
+      'Research on whether race-sensitive biomedical embeddings improve healthcare predictive models using MIMIC-IV data. Trained Word2vec and BERT embeddings for hospital stay and ICU readmission prediction.',
+    status: 'Completed',
+    tags: ['Machine Learning', 'MIMIC-IV', 'Embeddings'],
+    image: '',
+    link: 'https://github.com/dr-haoliu/race-sensitive-embeddings-mimic4',
+    technologies: ['Python', 'BERT', 'FastText', 'Jupyter Notebook'],
   },
   {
     id: 4,
-    title: 'SNOMED-CT Alignment',
-    description: 'Tools for mapping free-text clinical notes to SNOMED-CT concepts using neural machine translation.',
-    status: 'Active',
-    startDate: '2024-03',
-    collaborators: ['Montclair State University', 'Columbia University'],
-    repository: 'https://github.com/dr-haoliu/snomed-alignment',
-    image: '/images/projects/snomed.jpg',
-    tags: ['Entity Linking', 'SNOMED-CT', 'Medical Coding'],
-    featured: false,
-    link: 'https://github.com/dr-haoliu/snomed-alignment'
+    title: 'Race and Ethnicity Extraction',
+    description:
+      'Automatically extract race and ethnicity from free text using Python regex patterns, supporting clinical study demographic analysis.',
+    status: 'Completed',
+    tags: ['NLP', 'Text Mining', 'Demographics'],
+    image: '',
+    link: 'https://github.com/dr-haoliu/race-ethnicity-extraction',
+    technologies: ['Python', 'Regex'],
   },
   {
     id: 5,
-    title: 'Disease Progression Predictor',
-    description: 'A machine learning system for predicting disease progression patterns using electronic health record data.',
-    status: 'Active',
-    startDate: '2024-08',
-    collaborators: ['Montclair State University Hospital'],
-    repository: null,
-    image: '/images/projects/disease-progression.jpg',
-    tags: ['Predictive Analytics', 'EHR', 'Machine Learning'],
-    featured: true,
-    link: null
+    title: 'Evidence Map Visualization',
+    description:
+      'Evidence map repository for visualizing clinical study evidence and relationships, built with Vue.js frontend.',
+    status: 'Completed',
+    tags: ['Visualization', 'Vue.js', 'Evidence'],
+    image: '',
+    link: 'https://github.com/dr-haoliu/evidence-map-vue',
+    technologies: ['Vue.js', 'JavaScript'],
   },
   {
     id: 6,
-    title: 'Biomedical Knowledge Graph',
-    description: 'A comprehensive knowledge graph integrating multiple biomedical ontologies and literature for AI-driven discovery.',
-    status: 'Development',
-    startDate: '2024-10',
-    collaborators: ['Montclair State University'],
-    repository: null,
-    image: '/images/projects/knowledge-graph.jpg',
-    tags: ['Knowledge Graph', 'Ontology Integration', 'Graph Neural Networks'],
-    featured: false,
-    link: null
-  }
+    title: 'Clinical Trial NER',
+    description:
+      'Named Entity Recognition (NER) for clinical trials, extracting structured information from clinical trial text documents.',
+    status: 'Completed',
+    tags: ['NER', 'Clinical NLP', 'Machine Learning'],
+    image: '',
+    link: 'https://github.com/dr-haoliu/ClinicalTrialNER',
+    technologies: ['Python'],
+  },
 ]
-
-export const featuredProjects = projects.filter(item => item.featured)
-
-export const getActiveProjects = () => {
-  return projects.filter(item => item.status === 'Active')
-}
-
-export const getProjectById = (id: number) => {
-  return projects.find(item => item.id === id)
-}
