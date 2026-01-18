@@ -18,14 +18,17 @@ export default function Error({
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 flex items-center justify-center">
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-6xl font-bold text-blue-600 dark:text-blue-400 mb-6">Oops!</h1>
+          <h1 className="text-6xl font-bold text-blue-600 dark:text-blue-400 mb-6">
+            Oops!
+          </h1>
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
             Something went wrong
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-            We apologize for the inconvenience. An error has occurred while processing your request.
+            We apologize for the inconvenience. An error has occurred while
+            processing your request.
           </p>
-          
+
           <div className="flex justify-center gap-4 mb-8">
             <button
               onClick={reset}
@@ -50,7 +53,9 @@ export default function Error({
               {error.digest && (
                 <>
                   {'\n\n'}
-                  <span className="text-xs text-slate-500">Error ID: {error.digest}</span>
+                  <span className="text-xs text-slate-500">
+                    Error ID: {error.digest}
+                  </span>
                 </>
               )}
             </pre>

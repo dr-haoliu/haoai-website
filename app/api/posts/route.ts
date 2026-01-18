@@ -7,9 +7,10 @@ export async function GET() {
       { posts: posts.map(({ content, ...post }) => post) },
       {
         headers: {
-          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+          'Cache-Control':
+            'public, s-maxage=3600, stale-while-revalidate=86400',
         },
-      },
+      }
     )
   } catch (error) {
     return Response.json({ error: 'Failed to fetch posts' }, { status: 500 })
