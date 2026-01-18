@@ -14,12 +14,17 @@ export async function GET() {
   const posts = getAllPosts()
 
   posts.forEach((post) => {
+    if (!post || !post.title) {
+      console.warn('Skipping invalid post in RSS feed generation')
+      return
+    }
+
     feed.item({
       title: post.title,
-      description: post.excerpt,
+      description: post.excerpt || '',
       url: `https://haoai.org/blog/${post.slug}`,
-      date: new Date(post.date),
-      categories: [post.category as string],
+      date: post.date ? new Date(post.date) : new Date(),
+      categories: post.category ? [post.category] : [],
     })
   })
 
