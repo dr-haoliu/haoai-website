@@ -32,21 +32,6 @@ export function Hero() {
                 Latest News
               </Button>
             </div>
-            
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center animate-fade-in">
-              <div className="p-6">
-                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">50+</div>
-                <div className="text-gray-600 dark:text-gray-400">Publications</div>
-              </div>
-              <div className="p-6">
-                <div className="text-4xl font-bold text-secondary-600 dark:text-secondary-400 mb-2">20+</div>
-                <div className="text-gray-600 dark:text-gray-400">Active Projects</div>
-              </div>
-              <div className="p-6">
-                <div className="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">15+</div>
-                <div className="text-gray-600 dark:text-gray-400">Team Members</div>
-              </div>
-            </div>
           </div>
         </div>
       </Container>
