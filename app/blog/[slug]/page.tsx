@@ -45,11 +45,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   const relatedPosts = getRelatedBlogPosts(post.slug, post.category, 3)
 
+  const heroImage = 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&auto=format&fit=crop'
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-12">
-        <div className="container mx-auto px-4">
+      <div className="relative bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-12">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={heroImage}
+            alt="Hero"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <Link
             href="/blog"
             className="inline-flex items-center text-blue-100 hover:text-white mb-6 transition-colors"

@@ -11,6 +11,22 @@ export default function BlogPage() {
   const featuredPosts = getFeaturedBlogPosts()
   const recentPosts = getAllBlogPosts().slice(3)
 
+  const featuredImages = [
+    'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop',
+  ]
+
+  const recentImages = [
+    'https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1583912260925-14dd25133bc2?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop',
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
       {/* Hero Section */}
@@ -30,17 +46,19 @@ export default function BlogPage() {
             Featured Posts
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuredPosts.map((post) => (
+            {featuredPosts.map((post, index) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group"
               >
-                <article className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
-                    <div className="text-white text-6xl font-bold opacity-30">
-                      {post.title[0]}
-                    </div>
+                <article className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={featuredImages[index % featuredImages.length]}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
@@ -82,17 +100,19 @@ export default function BlogPage() {
             Recent Posts
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {recentPosts.map((post) => (
+            {recentPosts.map((post, index) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group"
               >
-                <article className="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center">
-                    <div className="text-white text-4xl font-bold opacity-30">
-                      {post.title[0]}
-                    </div>
+                <article className="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={recentImages[index % recentImages.length]}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   <div className="p-5">
                     <div className="flex items-center gap-2 mb-2">
