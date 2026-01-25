@@ -8,7 +8,7 @@ export function Footer() {
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-white mb-4">HaoAI</h3>
+              <h3 className="text-xl font-bold text-white mb-4 font-heading">HaoAI</h3>
               <p className="text-sm leading-relaxed mb-4">
                 Advancing agentic AI for great good in bioinformatics and healthcare research.
               </p>
@@ -17,7 +17,7 @@ export function Footer() {
                   href="https://github.com/dr-haoliu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer"
                   aria-label="GitHub"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@ export function Footer() {
                   href="https://twitter.com/liuhao530"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer"
                   aria-label="Twitter"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ export function Footer() {
                   href="https://linkedin.com/in/drliuhao"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -48,71 +48,71 @@ export function Footer() {
                 </Link>
               </div>
             </div>
-            
+
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold text-white mb-4 font-heading">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="#about" className="hover:text-white transition-colors">
+                  <Link href="#about" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="#research" className="hover:text-white transition-colors">
+                  <Link href="#research" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     Research
                   </Link>
                 </li>
                 <li>
-                  <Link href="#news" className="hover:text-white transition-colors">
+                  <Link href="#news" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     News & Insights
                   </Link>
                 </li>
                 <li>
-                  <Link href="#projects" className="hover:text-white transition-colors">
+                  <Link href="#projects" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     Projects
                   </Link>
                 </li>
                 <li>
-                  <Link href="#publications" className="hover:text-white transition-colors">
+                  <Link href="#publications" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     Publications
                   </Link>
                 </li>
                 <li>
-                  <Link href="#team" className="hover:text-white transition-colors">
+                  <Link href="#team" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     Team
                   </Link>
                 </li>
               </ul>
             </div>
-            
+
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
+              <h4 className="text-lg font-semibold text-white mb-4 font-heading">Resources</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="https://dr-haoliu.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  <Link href="https://dr-haoliu.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     Personal Website
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-white transition-colors">
+                  <Link href="/blog" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link href="/rss.xml" className="hover:text-white transition-colors">
+                  <Link href="/rss.xml" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     RSS Feed
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
+                  <Link href="/contact" className="hover:text-white transition-colors duration-200 cursor-pointer">
                     Contact
                   </Link>
                 </li>
               </ul>
             </div>
-            
+
             <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Stay Updated</h4>
+              <h4 className="text-lg font-semibold text-white mb-4 font-heading">Stay Updated</h4>
               <p className="text-sm mb-4">
                 Subscribe to our newsletter for the latest updates on AI research and bioinformatics.
               </p>
@@ -125,7 +125,7 @@ export function Footer() {
                 />
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors"
+                  className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg text-sm font-medium transition-colors duration-200 cursor-pointer"
                 >
                   Subscribe
                 </button>
@@ -133,15 +133,15 @@ export function Footer() {
             </div>
           </div>
         </div>
-        
+
         <div className="py-6 border-t border-surface-700 dark:border-surface-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 text-sm">
             <p>© {new Date().getFullYear()} HaoAI. All rights reserved.</p>
             <div className="flex space-x-4">
-              <Link href="/privacy" className="hover:text-white transition-colors">
+              <Link href="/privacy" className="hover:text-white transition-colors duration-200 cursor-pointer">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
+              <Link href="/terms" className="hover:text-white transition-colors duration-200 cursor-pointer">
                 Terms of Service
               </Link>
             </div>

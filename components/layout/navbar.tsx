@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { Search } from '@/components/search'
@@ -9,6 +10,7 @@ import { Search } from '@/components/search'
 export function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const stored = localStorage.getItem('theme')
@@ -26,16 +28,16 @@ export function Navbar() {
   }
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Research', href: '#research' },
+    { label: 'About', href: '/#about' },
+    { label: 'Research', href: '/#research' },
     { label: 'News', href: '/blog' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Publications', href: '#publications' },
-    { label: 'Team', href: '#team' },
+    { label: 'Projects', href: '/#projects' },
+    { label: 'Publications', href: '/#publications' },
+    { label: 'Team', href: '/#team' },
   ]
 
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-surface-900/80 backdrop-blur-md border-b border-gray-200 dark:border-surface-700 z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-surface-900/80 backdrop-blur-md border-b border-gray-200 dark:border-surface-700 z-50 transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
@@ -51,14 +53,19 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 transition-colors"
+                className={cn(
+                  "transition-colors duration-200 cursor-pointer",
+                  pathname === item.href.replace('/#', '#')
+                    ? "text-primary-600 dark:text-primary-400"
+                    : "text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400"
+                )}
               >
                 {item.label}
               </Link>
             ))}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors duration-200 cursor-pointer"
               aria-label="Toggle theme"
             >
               {isDarkMode ? (
@@ -76,7 +83,7 @@ export function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors duration-200 cursor-pointer"
               aria-label="Open menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +105,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors"
+                className="block px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors duration-200 cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -106,7 +113,7 @@ export function Navbar() {
             ))}
             <button
               onClick={toggleTheme}
-              className="flex items-center space-x-2 w-full px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors"
+              className="flex items-center space-x-2 w-full px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-100 dark:hover:bg-surface-700 transition-colors duration-200 cursor-pointer"
             >
               <span className="w-5 h-5">
                 {isDarkMode ? (

@@ -1,4 +1,7 @@
 import Link from 'next/link'
+import { Container } from '@/components/ui/container'
+import { Navbar } from '@/components/layout/navbar'
+import { Footer } from '@/components/layout/footer'
 import { getAllBlogPosts, getFeaturedBlogPosts } from '@/lib/content'
 
 export const metadata = {
@@ -28,21 +31,28 @@ export default function BlogPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">News & Updates</h1>
-          <p className="text-xl opacity-90">
-            Latest news, research updates, and blog posts from HaoAI
-          </p>
-        </div>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-100 via-white to-secondary-100 dark:from-surface-900 dark:via-surface-800 dark:to-surface-700">
+        <div className="absolute inset-0 bg-grid-slate-200/50 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/30 dark:[mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.15))]" />
+        <Container className="relative">
+          <div className="flex flex-col items-center justify-center min-h-[40vh] py-20 px-4">
+            <div className="text-center max-w-4xl mx-auto animate-fade-in">
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4 font-heading animate-slide-up">
+                News & Updates
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-sans animate-slide-up-delay">
+                Latest news, research updates, and blog posts from HaoAI
+              </p>
+            </div>
+          </div>
+        </Container>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white dark:from-surface-800 to-transparent" />
+      </section>
 
-      <div className="container mx-auto px-4 py-12">
-        {/* Featured Posts */}
+      <Container className="py-16 px-4">
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white font-heading">
             Featured Posts
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -52,7 +62,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="group"
               >
-                <article className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <article className="bg-white dark:bg-surface-800 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-200 hover:-translate-y-1">
                   <div className="aspect-video overflow-hidden">
                     <img
                       src={featuredImages[index % featuredImages.length]}
@@ -62,28 +72,28 @@ export default function BlogPage() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium">
+                      <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">
                         {post.category}
                       </span>
-                      <span className="text-sm text-slate-500 dark:text-slate-400">
+                      <span className="text-sm text-gray-500 dark:text-gray-400">
                         {post.readTime} min read
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors font-heading">
                       {post.title}
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                    <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-slate-500 dark:text-slate-400">
+                      <span className="text-sm text-gray-500 dark:text-gray-400">
                         {new Date(post.date).toLocaleDateString('en-US', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric',
                         })}
                       </span>
-                      <span className="text-blue-600 dark:text-blue-400 font-medium group-hover:underline">
+                      <span className="text-primary-600 dark:text-primary-400 font-medium group-hover:underline">
                         Read more →
                       </span>
                     </div>
@@ -94,9 +104,8 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Recent Posts */}
         <section>
-          <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-white">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white font-heading">
             Recent Posts
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -106,7 +115,7 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="group"
               >
-                <article className="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <article className="bg-white dark:bg-surface-800 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-200 hover:-translate-y-1 h-full">
                   <div className="aspect-video overflow-hidden">
                     <img
                       src={recentImages[index % recentImages.length]}
@@ -116,20 +125,20 @@ export default function BlogPage() {
                   </div>
                   <div className="p-5">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 rounded-full text-xs font-medium">
+                      <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-xs font-medium">
                         {post.category}
                       </span>
-                      <span className="text-xs text-slate-500 dark:text-slate-400">
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
                         {post.readTime} min
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold mb-2 text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                    <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors font-heading">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-3 line-clamp-2">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
                       {post.excerpt}
                     </p>
-                    <span className="text-xs text-slate-500 dark:text-slate-400">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">
                       {new Date(post.date).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
@@ -142,7 +151,8 @@ export default function BlogPage() {
             ))}
           </div>
         </section>
-      </div>
+      </Container>
+      <Footer />
     </div>
   )
 }

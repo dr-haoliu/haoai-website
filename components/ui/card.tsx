@@ -8,7 +8,7 @@ interface CardProps {
 export function Card({ children, className }: CardProps) {
   return (
     <div className={cn(
-      'bg-white dark:bg-surface-800 border border-gray-200 dark:border-surface-600 rounded-lg shadow-sm hover:shadow-md transition-shadow',
+      'bg-white dark:bg-surface-800 border border-gray-200 dark:border-surface-700 rounded-lg shadow-sm hover:shadow-md transition-all duration-200',
       className
     )}>
       {children}
@@ -23,7 +23,7 @@ interface CardHeaderProps {
 
 export function CardHeader({ children, className }: CardHeaderProps) {
   return (
-    <div className={cn('p-6 border-b border-gray-200 dark:border-surface-600', className)}>
+    <div className={cn('p-6 border-b border-gray-200 dark:border-surface-700', className)}>
       {children}
     </div>
   )
@@ -49,7 +49,7 @@ interface CardFooterProps {
 
 export function CardFooter({ children, className }: CardFooterProps) {
   return (
-    <div className={cn('p-6 border-t border-gray-200 dark:border-surface-600', className)}>
+    <div className={cn('p-6 border-t border-gray-200 dark:border-surface-700', className)}>
       {children}
     </div>
   )
