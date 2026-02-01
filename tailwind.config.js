@@ -54,22 +54,28 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Atkinson Hyperlegible', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: [
+          'Atkinson Hyperlegible',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+        ],
         heading: ['Crimson Pro', 'ui-sans-serif', 'system-ui', 'serif'],
       },
       spacing: {
-        '128': '32rem',
-        '144': '36rem',
+        128: '32rem',
+        144: '36rem',
       },
       borderRadius: {
         '4xl': '2rem',
       },
       transitionDuration: {
-        '200': '200ms',
-        '300': '300ms',
+        200: '200ms',
+        300: '300ms',
       },
       animation: {
         'fade-in': 'fadeIn 0.4s ease-out',
+        'fade-in-delay': 'fadeIn 0.4s ease-out 0.3s backwards',
         'slide-up': 'slideUp 0.4s ease-out',
         'slide-up-delay': 'slideUp 0.4s ease-out 0.2s backwards',
         'scale-in': 'scaleIn 0.2s ease-out',

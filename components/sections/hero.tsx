@@ -22,20 +22,49 @@ export function Hero() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto font-sans">
-              Pioneering the future of AI-driven biomedical research with cutting-edge agentic systems for discovering knowledge, accelerating drug discovery, and transforming healthcare.
+              Pioneering the future of AI-driven biomedical research with
+              cutting-edge agentic systems for discovering knowledge,
+              accelerating drug discovery, and transforming healthcare.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up-delay">
-              <Link href="#publications" className="transition-transform duration-200 hover:scale-105">
+              <Link
+                href="#publications"
+                className="transition-transform duration-200 hover:scale-105"
+              >
                 <Button size="lg" className="text-lg px-8 py-4 cursor-pointer">
                   Explore Research
                 </Button>
               </Link>
-              <Link href="/blog" className="transition-transform duration-200 hover:scale-105">
-                <Button variant="outline" size="lg" className="text-lg px-8 py-4 cursor-pointer">
+              <Link
+                href="/blog"
+                className="transition-transform duration-200 hover:scale-105"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-lg px-8 py-4 cursor-pointer"
+                >
                   Latest News
                 </Button>
               </Link>
+            </div>
+
+            {/* Video Section */}
+            <div className="mt-16 w-full max-w-4xl mx-auto animate-fade-in-delay">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700 bg-gray-900">
+                <video
+                  controls
+                  className="w-full aspect-video"
+                  poster="/images/video-poster.jpg"
+                >
+                  <source src="/videos/HaoAI-v3.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-3">
+                Watch our latest research highlights
+              </p>
             </div>
           </div>
         </div>
